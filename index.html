@@ -1,588 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kashyap Rupareliya | Computer Engineering Student</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashyap Rupareliya | Software Engineer | DSA Focused</title>
+  <meta name="description" content="Full-Stack Software Developer focused on microservices architecture, reactive frontends, and REST API performance optimization. Strong problem solver in DSA.">
+  
+  <!-- Google Fonts: Outfit (Headings) and Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#home">R.kashu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+  <!-- Custom Cursor Trail Canvas -->
+  <canvas id="cursor-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">R.<span>kashu</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <ul class="navbar-menu" id="navbar-menu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#artha">Artha System</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#achievements">Achievements</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="bg-glow-blob"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text scroll-animate">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Open to Opportunities
+          </div>
+          <h1 class="hero-title">Kashyap B.<br><span>Rupareliya</span></h1>
+          <div class="hero-subtitle-wrap">
+            <h2 class="hero-subtitle" id="hero-typing"></h2>
+          </div>
+          <p class="hero-desc">
+            Full-Stack Software Developer focused on microservices architecture, reactive frontends, and REST API performance optimization. Strong problem solver in DSA.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Get In Touch <i class="bi bi-arrow-right"></i></a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">OneLyk</div>
+              <div class="hero-stat-label">SDE Intern</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">Top 3%</div>
+              <div class="hero-stat-label">LeetCode Coder</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-value">530+</div>
+              <div class="hero-stat-label">DSA Solved</div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/kashyap1811" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/kashyap-1811" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://leetcode.com/u/kashyap1811" class="social-link" target="_blank" rel="noopener" aria-label="LeetCode"><i class="bi bi-code-slash"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual scroll-animate">
+          <div class="profile-card">
+            <div class="profile-glowing-ring"></div>
+            <div class="profile-card-inner">
+              <img src="./Images/KashyapResumeImage.jpeg" alt="Kashyap Rupareliya">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Bento Grid Section -->
+  <section id="about" class="section">
+    <div class="bg-glow-blob-right"></div>
+    <div class="container">
+      <div class="section-title-wrap scroll-animate">
+        <span class="section-subtitle">Discovery</span>
+        <h2 class="section-title">About Me & Stats</h2>
+      </div>
+      
+      <div class="bento-grid">
+        <!-- Card 1: Biography / Education -->
+        <div class="bento-card bento-card-1 scroll-animate">
+          <div class="bento-card-bg-glow" style="background: radial-gradient(circle, var(--glow-cyan) 0%, rgba(0,0,0,0) 70%); bottom: -50px; left: -50px;"></div>
+          <h3><i class="bi bi-mortarboard"></i> Profile & Education</h3>
+          <p>I am a passionate Computer Engineering student with a strong foundation in full-stack engineering and system scalability.</p>
+          <div class="bento-bio-details">
+            <div class="bento-bio-item">
+              <i class="bi bi-building"></i>
+              <div>
+                <strong>Institution</strong>
+                <span>Dharmsinh Desai University</span>
+              </div>
+            </div>
+            <div class="bento-bio-item">
+              <i class="bi bi-journal-bookmark"></i>
+              <div>
+                <strong>Degree & Year</strong>
+                <span>B.Tech Computer Engg (Expected 2027)</span>
+              </div>
+            </div>
+            <div class="bento-bio-item">
+              <i class="bi bi-graph-up-arrow"></i>
+              <div>
+                <strong>Academic Performance</strong>
+                <span>CPI: 9.67 / 10.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Key Expertise -->
+        <div class="bento-card bento-card-2 scroll-animate">
+          <div class="bento-card-bg-glow" style="background: radial-gradient(circle, var(--glow-purple) 0%, rgba(0,0,0,0) 70%); top: -50px; right: -50px;"></div>
+          <h3><i class="bi bi-cpu"></i> Key Tech Stack</h3>
+          <p>Proficient in building containerized distributed applications, microservices, and reactive frontends.</p>
+          <div class="bento-skills-grid">
+            <div class="skill-category-box">
+              <h4>Languages</h4>
+              <div class="skill-badges-flex">
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"> C++</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"> Java</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"> JS</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
+              </div>
+            </div>
+            <div class="skill-category-box">
+              <h4>Frameworks & Core</h4>
+              <div class="skill-badges-flex">
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"> React</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"> Spring Boot</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"> Node.js</span>
+                <span class="tech-badge"><img src="./Images/express.png" alt="Express"> Express</span>
+              </div>
+            </div>
+            <div class="skill-category-box">
+              <h4>DevOps & Cloud</h4>
+              <div class="skill-badges-flex">
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"> Docker</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka" style="filter: invert(1);"> Kafka</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"> Redis</span>
+                <span class="tech-badge"><img src="./Images/AWS.png" alt="AWS"> AWS S3</span>
+              </div>
+            </div>
+            <div class="skill-category-box">
+              <h4>Databases & Tools</h4>
+              <div class="skill-badges-flex">
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> Postgres</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"> MongoDB</span>
+                <span class="tech-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"> Git / GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Leetcode Accomplishments -->
+        <div class="bento-card bento-card-3 scroll-animate">
+          <div class="bento-card-bg-glow" style="background: radial-gradient(circle, var(--glow-blue) 0%, rgba(0,0,0,0) 70%); top: -50px; left: -50px;"></div>
+          <h3><i class="bi bi-award"></i> LeetCode Profile</h3>
+          <p>Algorithm problem solving is my hobby and daily routine.</p>
+          <div class="lc-stats-grid">
+            <div class="lc-stat-box full-width">
+              <div>
+                <div class="lc-stat-num highlight">Top 3%</div>
+                <div class="lc-stat-lbl">Global Ranking</div>
+              </div>
+            </div>
+            <div class="lc-stat-box">
+              <div class="lc-stat-num">530+</div>
+              <div class="lc-stat-lbl">Solved</div>
+            </div>
+            <div class="lc-stat-box">
+              <div class="lc-stat-num">1598</div>
+              <div class="lc-stat-lbl">Rating</div>
+            </div>
+          </div>
+          <a href="https://leetcode.com/u/kashyap1811" class="lc-badge-link" target="_blank" rel="noopener">Visit Leetcode <i class="bi bi-box-arrow-up-right"></i></a>
+        </div>
+
+        <!-- Card 4: DSA Live Visualizer -->
+        <div class="bento-card bento-card-4 scroll-animate">
+          <div class="bento-card-bg-glow" style="background: radial-gradient(circle, var(--glow-cyan) 0%, rgba(0,0,0,0) 70%); bottom: -50px; right: -50px;"></div>
+          <h3><i class="bi bi-terminal"></i> Interactive DSA Playground</h3>
+          <p>Run dynamic walkthroughs of core search and mapping algorithms in real time.</p>
+          
+          <div class="visualizer-container">
+            <div class="visualizer-screen">
+              <div class="visualizer-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-yellow"></span>
+                  <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-title" id="v-title">binary_search.cpp</div>
+              </div>
+              <div class="visualizer-stage">
+                <!-- Visual array grid node container -->
+                <div class="v-array" id="v-array">
+                  <!-- Nodes generated dynamically by JS -->
+                </div>
+                <!-- Pointers legend -->
+                <div class="v-pointers" id="v-pointers">
+                  <div class="v-pointer"><span class="v-pointer-dot left"></span> Left (L)</div>
+                  <div class="v-pointer"><span class="v-pointer-dot mid"></span> Mid (M)</div>
+                  <div class="v-pointer"><span class="v-pointer-dot right"></span> Right (R)</div>
+                </div>
+              </div>
+              <div class="visualizer-log" id="v-log">Select an algorithm and click 'Run Code'</div>
+            </div>
+            
+            <div class="visualizer-controls">
+              <button class="v-btn-select active" id="v-select-bs" data-algo="bs">
+                <span>Binary Search</span> <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="v-btn-select" id="v-select-ts" data-algo="ts">
+                <span>Two Sum (Map)</span> <i class="bi bi-chevron-right"></i>
+              </button>
+              <button class="v-btn-run" id="v-btn-run">
+                <i class="bi bi-play-fill"></i> Run Code
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Timeline -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-title-wrap scroll-animate">
+        <span class="section-subtitle">Timeline</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+
+      <div class="experience-timeline">
+        <div class="timeline-item scroll-animate">
+          <div class="timeline-node"><span class="timeline-node-inner"></span></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-title">
+                <h3>SDE Intern</h3>
+                <div class="timeline-company">OneLyk</div>
+              </div>
+              <div class="timeline-meta">
+                <div class="timeline-date">Apr 2026 - Present</div>
+                <div class="timeline-loc">Remote | Internship</div>
+              </div>
+            </div>
+            <div class="timeline-content">
+              <ul>
+                <li>Developed full-stack features for a hotel-tech platform, enhancing guest communication, automation, and review management.</li>
+                <li>Utilized React 18, Tailwind, Node.js, Express, and MongoDB to create scalable and responsive application modules.</li>
+                <li>Integrated third-party services including AWS S3, Twilio, Stripe, and OpenAI to facilitate messaging, payments, and AI-driven functionalities.</li>
+              </ul>
+            </div>
+            <div class="timeline-tech">
+              <span class="tech-badge">React 18</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">MongoDB</span>
+              <span class="tech-badge">AWS S3</span>
+              <span class="tech-badge">Twilio</span>
+              <span class="tech-badge">Stripe</span>
+              <span class="tech-badge">OpenAI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artha Project Architectural & Simulation Showcase -->
+  <section id="artha" class="section">
+    <div class="container">
+      <div class="section-title-wrap scroll-animate">
+        <span class="section-subtitle">System Design Showcase</span>
+        <h2 class="section-title">Artha Architecture Map</h2>
+      </div>
+
+      <div class="artha-showcase scroll-animate">
+        <div class="artha-showcase-bg-glow"></div>
+        <div class="artha-grid">
+          <!-- Interactive SVG diagram container -->
+          <div class="artha-diagram-wrap">
+            <svg class="artha-svg" viewBox="0 0 600 360">
+              <!-- Definitions for arrow markers and path shapes -->
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(255,255,255,0.15)"/>
+                </marker>
+              </defs>
+
+              <!-- Connection Paths -->
+              <path id="path-client-gateway" d="M 90 180 L 160 180" class="conn-path" marker-end="url(#arrow)"/>
+              <path id="path-gateway-eureka" d="M 210 155 L 210 105" class="conn-path"/>
+              <path id="path-gateway-redis" d="M 210 205 L 210 255" class="conn-path"/>
+              <path id="path-gateway-expense" d="M 260 180 L 330 180" class="conn-path" marker-end="url(#arrow)"/>
+              <path id="path-expense-db" d="M 380 205 L 380 255" class="conn-path" marker-end="url(#arrow)"/>
+              <path id="path-expense-kafka" d="M 430 180 L 480 180" class="conn-path" marker-end="url(#arrow)"/>
+              <path id="path-kafka-analytics" d="M 530 155 L 530 105" class="conn-path" marker-end="url(#arrow)"/>
+              <path id="path-analytics-mongo" d="M 530 60 L 530 35" class="conn-path" marker-end="url(#arrow)"/>
+              <path id="path-kafka-notification" d="M 530 205 L 530 255" class="conn-path" marker-end="url(#arrow)"/>
+
+              <!-- Flow pulses (glowing circles travelling on offset paths) -->
+              <circle id="pulse-client-gateway" class="flow-pulse" r="4"/>
+              <circle id="pulse-gateway-redis" class="flow-pulse" r="4"/>
+              <circle id="pulse-gateway-expense" class="flow-pulse" r="4"/>
+              <circle id="pulse-expense-db" class="flow-pulse" r="4"/>
+              <circle id="pulse-expense-kafka" class="flow-pulse" r="4"/>
+              <circle id="pulse-kafka-analytics" class="flow-pulse" r="4"/>
+              <circle id="pulse-analytics-mongo" class="flow-pulse" r="4"/>
+              <circle id="pulse-kafka-notification" class="flow-pulse" r="4"/>
+
+              <!-- System Blocks -->
+              <!-- Client Node -->
+              <rect x="10" y="155" width="80" height="50" class="node-block active" id="node-client"/>
+              <text x="50" y="180" class="node-text title">Client</text>
+              <text x="50" y="195" class="node-text">React 19</text>
+
+              <!-- API Gateway / Nginx Node -->
+              <rect x="160" y="155" width="100" height="50" class="node-block" id="node-gateway"/>
+              <text x="210" y="177" class="node-text title">API Gateway</text>
+              <text x="210" y="192" class="node-text">Spring Cloud</text>
+
+              <!-- Eureka Node -->
+              <rect x="160" y="60" width="100" height="45" class="node-block" id="node-eureka"/>
+              <text x="210" y="80" class="node-text title">Eureka</text>
+              <text x="210" y="93" class="node-text">Discovery</text>
+
+              <!-- Redis Node -->
+              <rect x="160" y="255" width="100" height="45" class="node-block" id="node-redis"/>
+              <text x="210" y="275" class="node-text title">Redis Cache</text>
+              <text x="210" y="288" class="node-text">Rate Limiter</text>
+
+              <!-- Core Expense Service Node -->
+              <rect x="330" y="155" width="100" height="50" class="node-block" id="node-expense"/>
+              <text x="380" y="177" class="node-text title">Expense Svc</text>
+              <text x="380" y="192" class="node-text">Spring Boot</text>
+
+              <!-- PostgreSQL Database Node -->
+              <rect x="330" y="255" width="100" height="45" class="node-block database" id="node-db"/>
+              <text x="380" y="275" class="node-text title" fill="var(--text-secondary)">PostgreSQL</text>
+              <text x="380" y="288" class="node-text" fill="var(--text-muted)">Neon DB</text>
+
+              <!-- Kafka Broker Node -->
+              <rect x="480" y="155" width="100" height="50" class="node-block" id="node-kafka"/>
+              <text x="530" y="177" class="node-text title">Kafka Topics</text>
+              <text x="530" y="192" class="node-text">Event Broker</text>
+
+              <!-- Analytics Service Node -->
+              <rect x="480" y="60" width="100" height="45" class="node-block" id="node-analytics"/>
+              <text x="530" y="80" class="node-text title">FastAPI</text>
+              <text x="530" y="93" class="node-text">Python Analytics</text>
+
+              <!-- MongoDB Node -->
+              <rect x="480" y="5" width="100" height="30" class="node-block database" id="node-mongo"/>
+              <text x="530" y="22" class="node-text title" fill="var(--text-secondary)">MongoDB</text>
+
+              <!-- Notification Service Node -->
+              <rect x="480" y="255" width="100" height="45" class="node-block" id="node-notification"/>
+              <text x="530" y="275" class="node-text title">Notifications</text>
+              <text x="530" y="288" class="node-text">SendGrid</text>
+            </svg>
+          </div>
+
+          <!-- Description and simulation triggers -->
+          <div class="artha-panel">
+            <h3>Artha Architecture</h3>
+            <p>
+              Artha is a high-performance budgeting platform utilizing a <strong>microservices architecture</strong> of 8 containerized services. It handles routing and authentication via Spring Cloud Gateway with centralized JWT validation, backed by Eureka service discovery, Redis rate limiting, and an event-driven core.
+            </p>
+            <button class="artha-btn-trigger" id="artha-simulate-btn">
+              <i class="bi bi-lightning-charge-fill"></i> Trigger AddExpense Transaction
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#achievements">Achievements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+            <div class="artha-logs-box" id="artha-logs">
+              <div class="artha-log-line system">&gt;_ Click the trigger button to watch events flow through microservices...</div>
             </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <!-- Home Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
-                    <div class="profile-container d-flex flex-column align-items-center align-items-lg-start">
-                        <img src="./Images/KashyapResumeImage.jpeg" alt="Kashyap Rupareliya" class="profile-image">
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h1 class="hero-title">Kashyap Rupareliya</h1>
-                    <h2 class="hero-subtitle">Aspiring AI/ML Engineer | Full Stack Web Developer</h2>
-                    <p class="hero-description">CODE</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#projects" class="btn btn-outline-primary">View Projects</a>
-                    </div>
-                    <div class="social-links mt-3 d-flex justify-content-center justify-content-lg-start">
-                        <a href="https://www.linkedin.com/in/kashyap-rupareliya-796353299/" class="social-link" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/kashyap-1811" class="social-link" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-                        <a href="https://leetcode.com/u/kashyaprupareliya1811/" class="social-link" target="_blank" rel="noopener"><i class="bi bi-code-slash"></i></a>
-                    </div>
-                </div>
+  <!-- Projects Grid Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title-wrap scroll-animate">
+        <span class="section-subtitle">Engineering</span>
+        <h2 class="section-title">Projects Portfolio</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Auto-Stock -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper">
+            <img src="./Images/Zerodha.png" alt="Auto-Stock UI screenshot">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Auto-Stock</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/StockTrading-App" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+                <a href="https://zerodha-demo.vercel.app/" target="_blank" rel="noopener" aria-label="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
             </div>
+            <p class="project-desc">
+              Full-stack stock trading simulation platform enabling real-time live market tracking, paper-trading, holdings management, and interactive charts via Finnhub API and Socket.IO.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Socket.IO</span>
+              <span class="project-tag">Finnhub API</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content" data-aos="fade-up" data-aos-delay="200">
-                        <div class="study-info">
-                            <h3>Study Information</h3>
-                            <div class="info-grid">
-                                <div class="info-item">
-                                    <i class="bi bi-building"></i>
-                                    <div><strong>College:</strong> Dharmsinh Desai University</div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="bi bi-mortarboard"></i>
-                                    <div><strong>Degree:</strong> B.Tech in Computer Engineering</div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="bi bi-calendar"></i>
-                                    <div><strong>Year:</strong> Expected 2027</div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="bi bi-graph-up"></i>
-                                    <div><strong>CPI:</strong> 9.67</div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="bi bi-journal"></i>
-                                    <div><strong>12th:</strong> Science (GSEB), 2019</div>
-                                </div>
-                                <div class="info-item">
-                                    <i class="bi bi-book"></i>
-                                    <div>
-                                        <strong>Relevant Courses:</strong> DSA, OOP, RDBMS, OS, Web Dev, CS Architecture, Software Engg.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-content" data-aos="fade-up" data-aos-delay="200">
-                        <div class="about-text">
-                            <h3 class="mb-4">Myself: </h3>
-                            <p>I am a passionate and driven Computer Engineering student with a strong focus on full-stack web development and problem-solving using C++.</p>
-                            
-                            <p>Over time, I have solved 530+ LeetCode problems, sharpening my algorithmic thinking and mastering data structures. These problem-solving skills have been complemented by my experience in designing, developing, and deploying full-stack projects.</p>
-                            
-                            <p>My philosophy is rooted in continuous learning and always challenging myself to go beyond my comfort zone. I believe that by staying curious, embracing challenges, and never settling for “good enough,” we can truly push the boundaries of what’s possible through code.</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Project 2: Know Your Repo -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper icon-type">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Logo" class="icon-type">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Know Your Repo</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/Know-Your-Repo" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+                <a href="https://know-your-repo.vercel.app/" target="_blank" rel="noopener" aria-label="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
             </div>
+            <p class="project-desc">
+              AI-powered repository guide that maps public GitHub projects to learning paths, generating architecture summaries, module walkthroughs, and providing a context-aware chat assistant.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React 18</span>
+              <span class="project-tag">Gemini API</span>
+              <span class="project-tag">GitHub API</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Skills</h2>
-            <div class="skills-carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
-                <div class="skills-carousel">
-
-                    <!-- Programming Languages -->
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
-                        <h3>Programming Languages</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/></span>Java</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/></span>C++</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/></span>Python</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/></span>JavaScript</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"/></span>Dart</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"/></span>C</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/></span>SQL</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="NoSQL"/></span>NoSQL</span>
-                        </div>
-                    </div>
-
-                    <!-- Frameworks -->
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="bi bi-window"></i></div>
-                        <h3 class="mb-5">Frameworks</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/></span>React</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/></span>Node.js</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="./Images/express.png" alt="Express.js"/></span>Express.js</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"/></span>Flutter</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"/></span>Spring Boot</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg" alt="Hibernate"/></span>Hibernate</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="./Images/django.png" alt="Django"/></span>Django</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET"/></span>.NET</span>
-                        </div>
-                    </div>
-
-                    <!-- Tools & Technologies -->
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="bi bi-tools"></i></div>
-                        <h3>Tools & Technologies</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/></span>Git</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="./Images/github.jpeg" alt="GitHub"/></span>GitHub</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"/></span>Postman</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS Code"/></span>VS Code</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/></span>MySQL</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"/></span>MongoDB</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="./Images/AWS.png" alt="AWS"/></span>AWS</span>
-                            <span class="skill-tag"><span class="skill-img"><img src="./Images/render.png" alt="Render"/></span>Render</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Project 3: AIHub -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper icon-type">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="ASP.NET Core logo" class="icon-type">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>AIHub</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/AIHub" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+                <a href="https://aihub.vercel.app/" target="_blank" rel="noopener" aria-label="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
             </div>
+            <p class="project-desc">
+              Unified chat platform routing multiple AI models (OpenRouter) through a centralized ASP.NET Core API gateway. Features encrypted key storage and JWT validation.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">ASP.NET Core 9</span>
+              <span class="project-tag">Entity Framework</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">React 18</span>
+              <span class="project-tag">JWT</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 mx-auto">
-                    <h2 class="section-title" data-aos="fade-up">Achievements</h2>
-                    <div class="achievements-grid" data-aos="fade-up" data-aos-delay="150">
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/leetcode.png" alt="LeetCode"/></div>
-                            <h3>LeetCode</h3>
-                            <p>Solved 530+ Problems.<br>
-                                leetcode is my favourite platform and one actually my hobby to solve daily question of leetcode.<br>
-                                Contest Rating: 1598 <br>
-                                Global Ranking: 131,023
-                            </p>
-                            <a href="https://leetcode.com/u/kashyaprupareliya1811/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">Visit Profile</a>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/Flipkart-grid.webp" alt="Flipkart"/></div>
-                            <h3>Flipkart Grid 7.0</h3>
-                            <p>Out of 160,989 Registrations for Flipkart Grid 7.0 Round 1, 
-                                <br>I passed the Coding Round 1 which included 3 DSA questions in 1.5 hrs.
-                            </p>
-                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7351593548233728001/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Certificate</a>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/Knowy-DSA.webp" alt="Knowy"/></div>
-                            <h3>Knowy DSA</h3>
-                            <p>In DSA Compitition organised by Technocrats Institute of Technology, Bhopal, including 30 MCQs in first Round in 30 Mins.
-                             In 2nd Round there were 5 Coding questions in 1 hr, where I secured 1st position.</p>
-                            <a href="https://drive.google.com/file/d/1ih284_CE5dG4glVEXWiYRmccSHeQsNfX/view" class="btn btn-outline-primary btn-sm mb-0" target="_blank" rel="noopener">View Certificate</a>
-                            <a href="https://unstop.com/hackathons/dsa-quiz-and-coding-competition-technocrats-institute-of-technology-bhopal-1509508/coding-challenge/284674" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Result</a>
-                        </div>
-                        
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/Adobe.jpeg" alt="Adobe"/></div>
-                            <h3>Adobe India Hackathon</h3>
-                            <p>Passed round 1 of Adobe India Hackathon which included 15 MCQs and 1 coding question all to be completed in 1 hour.</p>
-                            <a href="https://drive.google.com/file/d/1r4--hOMYH8hQkcbiOtKlQxEgIfIeabsZ/view" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Certificate</a>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/Apna-College.png.webp" alt="Flipkart"/></div>
-                            <h3>SIGMA Web Development</h3>
-                            <p>Completed a comprehensive MERN Stack course from Apna College in just 2 months. Under the guidance of Shradha Ma’am.
-                            </p>
-                            <a href="https://drive.google.com/file/d/1ts7WZcMsMgA3o0GASNnvb8r6R6ETJkg6/view" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Certificate</a>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/Apna-College.png.webp" alt="Flipkart"/></div>
-                            <h3>Apna College DSA course</h3>
-                            <p>Completed DSA course from Arrays to Graph, DP.<br>
-                                She has been an inspiration for me and played a key role in motivating me to start my journey in the field of computer science.<br>
-                            </p>
-                            <a href="https://drive.google.com/file/d/1skt8aS1xRplr5hEm-Zz8IerZQdO9i07K/view" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Certificate</a>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/Code Carnage.webp" alt="Code Carnage"/></div>
-                            <h3>Code Carnage</h3>
-                            <p>Code Carnage was orgnised by Chandigarh Univeristy, including 10 Quiz questions and 3 DSA questions where I stood 131st.</p>
-
-                            <a href="https://drive.google.com/file/d/1aSCdBwDprdOSQClUwc6rKbtmTOnMSH0l/view" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">View Result</a>
-                        </div>
-
-                        <div class="achievement-card">
-                            <div class="card-thumb"><img src="./Images/GFG.jpeg" alt="GFG"/></div>
-                            <h3>GFG - geeksForgeeks</h3>
-                            <p>I am also a prominient coder and Algorithmic Master in GFG.<br>
-                                I regularly visit GFG for learning new Algorithms <br>
-                                Having 294 rank in DDU College.
-                            </p>
-                            <a href="https://www.geeksforgeeks.org/user/kashyapruparja3/" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">Visit Profile</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Project 4: Bank System -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper icon-type">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot Logo" class="icon-type">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Bank System</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/Bank-System" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+              </div>
             </div>
+            <p class="project-desc">
+              A secure back-end banking engine supporting secure accounts, transfers, ledger tracking, transactions, and REST administration panels.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">Hibernate</span>
+              <span class="project-tag">JPA</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">REST APIs</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Projects</h2>
-            <div class="featured-project" data-aos="fade-up" data-aos-delay="150">
-                <div class="section-subtitle">Featured Project</div>
-                <div class="project-card featured-card">
-                    <div class="card-thumb">
-                        <img src="https://raw.githubusercontent.com/kashyap-1811/Artha/d062893dc609e420c173ca87d355383450836b77/artha-frontend/public/artha-logo.png" alt="Artha logo"/>
-                    </div>
-                    <div class="featured-content">
-                        <div class="project-header">
-                            <h3>Artha — Microservices Budget & Expense Tracker</h3>
-                            <div class="project-links">
-                                <a href="https://github.com/kashyap-1811/Artha" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                <a href="https://www.artha.systems/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Artha (Sanskrit for wealth/finance) is a full-stack, microservices platform for multi-company budgeting and expense tracking with real-time
-                            analytics, alerts, and secure access. Deployed on DigitalOcean behind Nginx/SSL, it combines event-driven services with caching and rate limiting
-                            to keep dashboards fast and reliable at scale.
-                        </p>
-                        <ul class="project-highlights">
-                            <li>Company management with role-based access, personal companies, and fiscal-period budgets with category allocations.</li>
-                            <li>Expense approvals, monthly history, and budget progress visuals with thresholds at 80%/100% (SendGrid alerts).</li>
-                            <li>Python analytics service (FastAPI) for health scores, category breakdowns, MoM trends, top spenders, and active budget analysis.</li>
-                            <li>Event-driven CQRS with Kafka topics for expense, budget, and membership events plus async notification workflows.</li>
-                            <li>Redis caching for hot reads, Redis rate limiting at the API gateway, and JWT + Google OAuth authentication.</li>
-                            <li>Services routed via Spring Cloud Gateway + Eureka, backed by PostgreSQL, MongoDB Atlas, Docker Compose, and Kafka UI.</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">React 19</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">Java 17</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">Spring Cloud</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">MongoDB Atlas</span>
-                            <span class="tech-tag">SendGrid</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">DigitalOcean</span>
-                            <span class="tech-tag">Nginx</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Project 5: Event Entry Pass -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper">
+            <img src="./Images/Eventify-logo.jpeg" alt="Eventify Logo">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Event Entry Pass</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/Eventify" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 mx-auto">
-                    <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
-                        <!-- Stock Trading (MERN) -->
-                        <div class="project-card">
-                            <div class="card-thumb"><img src="./Images/Zerodha.png" alt="Stock Trading"/></div>
-                            <div class="project-header">
-                                <h3>Stock Trading</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/StockTrading-App" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                    <a href="https://zerodha-demo.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                Real-time stock trading simulation platform built with the MERN stack, Finnhub live market data, and Socket.IO streaming.
-                                Users can paper trade, manage holdings, track profit/loss, and explore analytics dashboards with interactive charts.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Finnhub API</span>
-                                <span class="tech-tag">Socket.IO</span>
-                                <span class="tech-tag">Razorpay</span>
-                                <span class="tech-tag">Chart.js</span>
-                                <span class="tech-tag">JWT/OAuth</span>
-                            </div>
-                        </div>
-                        <!-- Know Your Repo -->
-                        <div class="project-card">
-                            <div class="card-thumb icon-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Know Your Repo"/></div>
-                            <div class="project-header">
-                                <h3>Know Your Repo</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/Know-Your-Repo" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                    <a href="https://know-your-repo.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                AI-powered repository guide that turns any public GitHub project into a structured learning path with architecture summaries,
-                                phase-wise tasks, and a context-aware chat assistant for onboarding, debugging, and feature exploration.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">AI</span>
-                                <span class="tech-tag">Repository Analysis</span>
-                                <span class="tech-tag">GitHub API</span>
-                                <span class="tech-tag">Search</span>
-                                <span class="tech-tag">Learning Paths</span>
-                            </div>
-                        </div>
-                        <!-- AIHub -->
-                        <div class="project-card">
-                            <div class="card-thumb icon-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="AIHub"/></div>
-                            <div class="project-header">
-                                <h3>AIHub</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/AIHub" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                    <a href="https://aihub.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                Unified chat hub that routes multiple AI providers through a single API, with secure JWT auth, Google OAuth, and encrypted
-                                API key storage. ASP.NET Core 9 + EF Core SQLite backend paired with a React 18 + Vite chat UI.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">ASP.NET Core 9</span>
-                                <span class="tech-tag">EF Core</span>
-                                <span class="tech-tag">SQLite</span>
-                                <span class="tech-tag">JWT</span>
-                                <span class="tech-tag">Google OAuth</span>
-                                <span class="tech-tag">React 18</span>
-                                <span class="tech-tag">Vite</span>
-                                <span class="tech-tag">OpenRouter</span>
-                            </div>
-                        </div>
-
-                        <!-- Bank System (Spring Boot / Hibernate) -->
-                        <div class="project-card">
-                            <div class="card-thumb icon-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring"/></div>
-                            <div class="project-header">
-                                <h3>Bank System</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/Bank-System" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                Developed a secure and scalable Bank Management System using Spring Boot, enabling users to create accounts, perform
-                                transactions, and manage banking operations.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">Hibernate</span>
-                                <span class="tech-tag">JPA</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">REST API</span>
-                            </div>
-                        </div>
-
-                        <!-- Event Entry Pass (Django) -->
-                        <div class="project-card">
-                            <div class="card-thumb"><img src="./Images/Eventify-logo.jpeg" alt="Django"/></div>
-                            <div class="project-header">
-                                <h3>Event Entry Pass</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/Eventify" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                            <p class="project-description">Created a Django-based Event Entry Pass System to manage user registrations, generate entry passes, and track event
-                                attendance.<br>
-                                Implemented QR code generation and scanning to log attendance, and added a secure "Forgot Password" feature using OTP
-                                verification via email along with email notifications.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">QR</span>
-                                <span class="tech-tag">Email</span>
-                                <span class="tech-tag">OTP</span>
-                                <span class="tech-tag">SQLite/MySQL</span>
-                            </div>
-                        </div>
-
-                        <!-- Holiday Hotels (MERN) -->
-                        <div class="project-card">
-                            <div class="card-thumb"><img src="./Images/HolidayHotels.png" alt="MERN"/></div>
-                            <div class="project-header">
-                                <h3>Holiday Hotels</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/HolidayHotels" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                    <a href="https://holiday-hotels.onrender.com/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
-                                </div>
-                            </div>
-                            <p class="project-description">Built a full-stack Holiday Hotels web application that allows users to explore, filter, and explore hotel listings with a clean,
-                                responsive UI. Developed the app using the MERN stack with user authentication, image uploads, and listing management.
-                                Connected MongoDB Atlas for cloud database storage and deployed the app live on Render.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Cloud (Atlas/Render)</span>
-                            </div>
-                        </div>
-
-                        <!-- Scheduling -->
-                        <!-- CPU Scheduling Visualizer (OS Project) -->
-                        <div class="project-card">
-                            <div class="card-thumb"><img src="./Images/SchedulingAlgorithms.jpeg" alt="OS Project"/></div>
-                            <div class="project-header">
-                                <h3>CPU Scheduling Visualizer</h3>
-                                <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/CPU-Scheduling-Visualizer" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
-                                    <!-- <a href="https://cpu-scheduling-visualizer.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a> -->
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                I am planning to develop a web-based tool to visualize various CPU scheduling algorithms such as FCFS, SJF, Priority Scheduling, and Round Robin etc.
-                                The application will allow users to input process details, run the chosen algorithm, and see a step-by-step Gantt chart along with average waiting and turnaround times.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">OS</span>
-                                <span class="tech-tag">Scheduling Algorithms</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <p class="project-desc">
+              Django event management app generating scan-capable QR passes for entries, checking authentication, OTP-based password resets, and sending email notifications.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Django</span>
+              <span class="project-tag">QR Code API</span>
+              <span class="project-tag">OTP / SMTP</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Bootstrap</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
-            <div class="row g-4">
-                <!-- Left: contact info + social links + resume -->
-                <div class="col-md-6">
-                    <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="bi bi-envelope"></i>
-                                <div>
-                                    <h4>Name</h4>
-                                    <p>Kashyap</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-phone"></i>
-                                <div>
-                                    <h4>Email</h4>
-                                    <p>kashyaprupareliya1811@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <div>
-                                    <h4>Location</h4>
-                                    <p>Veraval, Gujarat, India. 362266</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resume-download">
-                            <a href="https://drive.google.com/file/d/1fVL7TSnDS1qbKlOj8ty3ClY9LjOhK19Q/view" target="_blank" rel="noopener" class="btn btn-primary">
-                                <i class="bi bi-download"></i> Download Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Right: email form -->
-                <div class="col-md-6">
-                    <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="mb-3">Send me an email</h4>
-                        <form id="contactEmailForm">
-                            <div class="form-floating mb-3">
-                                <input type="text" id="cf-name" class="form-control" placeholder=" " required>
-                                <label for="cf-name" class="form-label">Your Name</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" id="cf-subject" class="form-control" placeholder=" " required>
-                                <label for="cf-subject" class="form-label">Subject</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <textarea id="cf-message" class="form-control" placeholder=" " style="height: 100px" required></textarea>
-                                <label for="cf-message" class="form-label">Message</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary mt-2"><i class="bi bi-send"></i> Send Email</button>
-                        </form>
-                    </div>
-                </div>
+        <!-- Project 6: Holiday Hotels -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper">
+            <img src="./Images/HolidayHotels.png" alt="Holiday Hotels Screenshot">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>Holiday Hotels</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/HolidayHotels" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+                <a href="https://holiday-hotels.onrender.com/" target="_blank" rel="noopener" aria-label="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; <span id="currentYear"></span> Kashyap Rupareliya. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/kashyap-rupareliya-796353299/" class="social-link" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/kashyap-1811" class="social-link" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-                    <a href="https://leetcode.com/u/kashyaprupareliya1811/" class="social-link" target="_blank" rel="noopener"><i class="bi bi-code-slash"></i></a>
-                </div>
+            <p class="project-desc">
+              MERN full-stack hotel explorer platform with listing directories, robust search filters, dashboard listings management, and image upload configurations.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">MongoDB Atlas</span>
+              <span class="project-tag">Render</span>
             </div>
+          </div>
         </div>
-    </footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+        <!-- Project 7: CPU Scheduling Visualizer -->
+        <div class="project-card scroll-animate">
+          <div class="project-img-wrapper">
+            <img src="./Images/SchedulingAlgorithms.jpeg" alt="CPU Scheduling visualizer diagram">
+          </div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3>CPU Visualizer</h3>
+              <div class="project-links">
+                <a href="https://github.com/kashyap-1811/CPU-Scheduling-Visualizer" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <p class="project-desc">
+              An educational web tool designed to plot dynamic Gantt charts, calculate waiting and turnaround times across FCFS, SJF, RR, and Priority algorithms.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">OS Principles</span>
+              <span class="project-tag">Scheduling</span>
+              <span class="project-tag">HTML5 Canvas</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+  <!-- Achievements Bento Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-title-wrap scroll-animate">
+        <span class="section-subtitle">Excellence</span>
+        <h2 class="section-title">Milestones & Certificates</h2>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Flipkart Grid -->
+        <div class="achievement-card achievement-card-1 scroll-animate">
+          <div class="achievement-icon-wrap">
+            <img src="./Images/Flipkart-grid.webp" alt="Flipkart Grid">
+          </div>
+          <h3>Flipkart Grid 7.0</h3>
+          <p>
+            Out of 160,989 registrations, successfully cleared Round 1 coding challenges solving 3 DSA problems in 1.5 hours.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7351593548233728001/" target="_blank" rel="noopener" class="achievement-link">
+            View Credentials <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Knowy DSA 1st position -->
+        <div class="achievement-card achievement-card-2 scroll-animate">
+          <div class="achievement-icon-wrap">
+            <img src="./Images/Knowy-DSA.webp" alt="Knowy DSA">
+          </div>
+          <h3>Knowy DSA Winner (1st Rank)</h3>
+          <p>
+            Secured 1st rank in the DSA Quiz and Coding competition organized by Technocrats Institute of Technology, Bhopal, answering 30 MCQ metrics and solving 5 complex code scenarios.
+          </p>
+          <a href="https://drive.google.com/file/d/1ih284_CE5dG4glVEXWiYRmccSHeQsNfX/view" target="_blank" rel="noopener" class="achievement-link">
+            View Certificate <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Adobe India Hackathon -->
+        <div class="achievement-card achievement-card-3 scroll-animate">
+          <div class="achievement-icon-wrap">
+            <img src="./Images/Adobe.jpeg" alt="Adobe logo">
+          </div>
+          <h3>Adobe India Hackathon</h3>
+          <p>
+            Passed the rigorous first round of the national hackathon consisting of 15 CS core concept MCQs and 1 complex program to complete in 1 hour.
+          </p>
+          <a href="https://drive.google.com/file/d/1r4--hOMYH8hQkcbiOtKlQxEgIfIeabsZ/view" target="_blank" rel="noopener" class="achievement-link">
+            View Certificate <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- GFG College Rank 294 -->
+        <div class="achievement-card achievement-card-4 scroll-animate">
+          <div class="achievement-icon-wrap">
+            <img src="./Images/GFG.jpeg" alt="GFG logo">
+          </div>
+          <h3>GeeksForGeeks Rank 294</h3>
+          <p>
+            Prominent algorithmic master and active coder on GeeksforGeeks, ranking 294 inside Dharmsinh Desai University (DDU).
+          </p>
+          <a href="https://www.geeksforgeeks.org/user/kashyapruparja3/" target="_blank" rel="noopener" class="achievement-link">
+            Visit Profile <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title-wrap scroll-animate">
+        <span class="section-subtitle">Connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info scroll-animate">
+          <h3>Let's collaborate</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+            Whether you want to discuss full-stack projects, DSA optimization, microservices, or internship opportunities, my inbox is always open.
+          </p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="bi bi-envelope"></i></div>
+              <div class="contact-info-text">
+                <strong>Email</strong>
+                <span>kashyaprupareliya1811@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="contact-info-text">
+                <strong>Location</strong>
+                <span>Nadiad, India</span>
+              </div>
+            </div>
+          </div>
+          
+          <div style="margin-top: 3rem;">
+            <a href="https://drive.google.com/file/d/1fVL7TSnDS1qbKlOj8ty3ClY9LjOhK19Q/view" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="bi bi-file-earmark-arrow-down"></i> Download Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap scroll-animate">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" class="form-input" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" class="form-input" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <i class="bi bi-send"></i> Send Message
+            </button>
+            <div class="contact-alert" id="contact-alert"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> Kashyap Rupareliya. Built with craft.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/kashyap1811" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/kashyap-1811" class="social-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://leetcode.com/u/kashyap1811" class="social-link" target="_blank" rel="noopener" aria-label="LeetCode"><i class="bi bi-code-slash"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
