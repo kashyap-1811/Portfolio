@@ -278,23 +278,143 @@
     <section id="projects" class="section bg-light">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <div class="featured-project" data-aos="fade-up" data-aos-delay="150">
+                <div class="section-subtitle">Featured Project</div>
+                <div class="project-card featured-card">
+                    <div class="card-thumb">
+                        <img src="https://raw.githubusercontent.com/kashyap-1811/Artha/d062893dc609e420c173ca87d355383450836b77/artha-frontend/public/artha-logo.png" alt="Artha logo"/>
+                    </div>
+                    <div class="featured-content">
+                        <div class="project-header">
+                            <h3>Artha — Microservices Budget & Expense Tracker</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/kashyap-1811/Artha" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
+                                <a href="https://www.artha.systems/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Artha (Sanskrit for wealth/finance) is a full-stack, microservices platform for multi-company budgeting and expense tracking with real-time
+                            analytics, alerts, and secure access. Deployed on DigitalOcean behind Nginx/SSL, it combines event-driven services with caching and rate limiting
+                            to keep dashboards fast and reliable at scale.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Company management with role-based access, personal companies, and fiscal-period budgets with category allocations.</li>
+                            <li>Expense approvals, monthly history, and budget progress visuals with thresholds at 80%/100% (SendGrid alerts).</li>
+                            <li>Python analytics service (FastAPI) for health scores, category breakdowns, MoM trends, top spenders, and active budget analysis.</li>
+                            <li>Event-driven CQRS with Kafka topics for expense, budget, and membership events plus async notification workflows.</li>
+                            <li>Redis caching for hot reads, Redis rate limiting at the API gateway, and JWT + Google OAuth authentication.</li>
+                            <li>Services routed via Spring Cloud Gateway + Eureka, backed by PostgreSQL, MongoDB Atlas, Docker Compose, and Kafka UI.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">React 19</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Java 17</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Spring Cloud</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">MongoDB Atlas</span>
+                            <span class="tech-tag">SendGrid</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">DigitalOcean</span>
+                            <span class="tech-tag">Nginx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12 mx-auto">
                     <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
+                        <!-- Stock Trading (MERN) -->
+                        <div class="project-card">
+                            <div class="card-thumb"><img src="./Images/Zerodha.png" alt="Stock Trading"/></div>
+                            <div class="project-header">
+                                <h3>Stock Trading</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kashyap-1811/StockTrading-App" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
+                                    <a href="https://zerodha-demo.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Real-time stock trading simulation platform built with the MERN stack, Finnhub live market data, and Socket.IO streaming.
+                                Users can paper trade, manage holdings, track P&amp;L, and explore analytics dashboards with interactive charts.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Finnhub API</span>
+                                <span class="tech-tag">Socket.IO</span>
+                                <span class="tech-tag">Razorpay</span>
+                                <span class="tech-tag">Chart.js</span>
+                                <span class="tech-tag">JWT/OAuth</span>
+                            </div>
+                        </div>
+                        <!-- Know Your Repo -->
+                        <div class="project-card">
+                            <div class="card-thumb icon-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Know Your Repo"/></div>
+                            <div class="project-header">
+                                <h3>Know Your Repo</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kashyap-1811/Know-Your-Repo" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
+                                    <a href="https://know-your-repo.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                AI-powered repository guide that turns any public GitHub project into a structured learning path with architecture summaries,
+                                phase-wise tasks, and a context-aware chat assistant for onboarding, debugging, and feature exploration.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">Repository Analysis</span>
+                                <span class="tech-tag">GitHub API</span>
+                                <span class="tech-tag">Search</span>
+                                <span class="tech-tag">Learning Paths</span>
+                            </div>
+                        </div>
+                        <!-- AIHub -->
+                        <div class="project-card">
+                            <div class="card-thumb icon-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="AIHub"/></div>
+                            <div class="project-header">
+                                <h3>AIHub</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kashyap-1811/AIHub" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
+                                    <a href="https://aihub.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Unified chat hub that routes multiple AI providers through a single API, with secure JWT auth, Google OAuth, and encrypted
+                                API key storage. ASP.NET Core 9 + EF Core SQLite backend paired with a React 18 + Vite chat UI.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">ASP.NET Core 9</span>
+                                <span class="tech-tag">EF Core</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">Google OAuth</span>
+                                <span class="tech-tag">React 18</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">OpenRouter</span>
+                            </div>
+                        </div>
+
                         <!-- Bank System (Spring Boot / Hibernate) -->
                         <div class="project-card">
-                            <div class="card-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring"/></div>
+                            <div class="card-thumb icon-thumb"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring"/></div>
                             <div class="project-header">
                                 <h3>Bank System</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/Bank-System" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i></a>
-                                    <!-- <a href="https://bank-system-demo.example.com" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a> -->
+                                    <a href="https://github.com/kashyap-1811/Bank-System" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
                                 </div>
                             </div>
-                            <p class="project-description">Developed a secure and scalable Bank Management System using Spring Boot, enabling users to create accounts, perform
-                                transactions, and manage banking operations.<br>
-                                Implemented RESTful APIs using Spring Boot and JPA for seamless backend functionality, with proper validation, layered
-                                architecture, and integration with a MySQL Database.</p>
+                            <p class="project-description">
+                                Developed a secure and scalable Bank Management System using Spring Boot, enabling users to create accounts, perform
+                                transactions, and manage banking operations.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-tag">Spring Boot</span>
                                 <span class="tech-tag">Hibernate</span>
@@ -303,19 +423,18 @@
                                 <span class="tech-tag">REST API</span>
                             </div>
                         </div>
+
                         <!-- Event Entry Pass (Django) -->
                         <div class="project-card">
                             <div class="card-thumb"><img src="./Images/Eventify-logo.jpeg" alt="Django"/></div>
                             <div class="project-header">
                                 <h3>Event Entry Pass</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/Eventify" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i></a>
-                                    <!-- <a href="https://eventify-demo.example.com" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a> -->
+                                    <a href="https://github.com/kashyap-1811/Eventify" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
                                 </div>
                             </div>
                             <p class="project-description">Created a Django-based Event Entry Pass System to manage user registrations, generate entry passes, and track event
-                                attendance.<br>
-                                Implemented QR code generation and scanning to log attendance, and added a secure "Forgot Password" feature using OTP
+                                attendance. Implemented QR code generation and scanning to log attendance, and added a secure "Forgot Password" feature using OTP
                                 verification via email along with email notifications.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Django</span>
@@ -325,19 +444,19 @@
                                 <span class="tech-tag">SQLite/MySQL</span>
                             </div>
                         </div>
+
                         <!-- Holiday Hotels (MERN) -->
                         <div class="project-card">
                             <div class="card-thumb"><img src="./Images/HolidayHotels.png" alt="MERN"/></div>
                             <div class="project-header">
                                 <h3>Holiday Hotels</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/HolidayHotels" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i></a>
+                                    <a href="https://github.com/kashyap-1811/HolidayHotels" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
                                     <a href="https://holiday-hotels.onrender.com/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a>
                                 </div>
                             </div>
                             <p class="project-description">Built a full-stack Holiday Hotels web application that allows users to explore, filter, and explore hotel listings with a clean,
-                                responsive UI.<br>
-                                Developed the app using the MERN stack with user authentication, image uploads, and listing management.<br>
+                                responsive UI. Developed the app using the MERN stack with user authentication, image uploads, and listing management.
                                 Connected MongoDB Atlas for cloud database storage and deployed the app live on Render.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">MongoDB</span>
@@ -348,52 +467,27 @@
                             </div>
                         </div>
 
-                         <!-- Stock  Trading (MERN) -->
-                         <div class="project-card">
-                            <div class="card-thumb"><img src="./Images/Zerodha.png" alt="MERN"/></div>
+                        <!-- Scheduling -->
+                        <!-- CPU Scheduling Visualizer (OS Project) -->
+                        <div class="project-card">
+                            <div class="card-thumb"><img src="./Images/SchedulingAlgorithms.jpeg" alt="OS Project"/></div>
                             <div class="project-header">
-                                <h3>Stock Trading</h3>
+                                <h3>CPU Scheduling Visualizer</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/kashyap-1811/StockTrading-App" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i></a>
-                                    <!-- <a href="https://holiday-hotels.onrender.com/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a> -->
+                                    <a href="https://github.com/yourusername/CPU-Scheduling-Visualizer" target="_blank" rel="noopener" class="project-link" title="GitHub"><i class="bi bi-github"></i></a>
+                                    <!-- <a href="https://cpu-scheduling-visualizer.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a> -->
                                 </div>
                             </div>
                             <p class="project-description">
-                                I have working on a full stack stock trading website where a user can buy, sell and see stocks feom a live stock API.<br>
-                                I am also planning to integrate Walllet system in application itself so that payment process of user is more simplified.<br>
-                                Also included Charts API so that user can graphically analysis its P&L and portfolio.
+                                I am planning to develop a web-based tool to visualize various CPU scheduling algorithms such as FCFS, SJF, Priority Scheduling, and Round Robin etc.
+                                The application will allow users to input process details, run the chosen algorithm, and see a step-by-step Gantt chart along with average waiting and turnaround times.
                             </p>
                             <div class="project-tech">
-                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">OS</span>
+                                <span class="tech-tag">Scheduling Algorithms</span>
                                 <span class="tech-tag">Express</span>
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Cloud (Atlas)</span>
-                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">MongoDB</span>
                             </div>
-                        </div>
-
-                            <!-- Scheduling -->
-                            <!-- CPU Scheduling Visualizer (OS Project) -->
-                            <div class="project-card">
-                                <div class="card-thumb"><img src="./Images/SchedulingAlgorithms.jpeg" alt="OS Project"/></div>
-                                <div class="project-header">
-                                    <h3>CPU Scheduling Visualizer</h3>
-                                    <div class="project-links">
-                                        <a href="https://github.com/yourusername/CPU-Scheduling-Visualizer" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i></a>
-                                        <!-- <a href="https://cpu-scheduling-visualizer.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo"><i class="bi bi-box-arrow-up-right"></i></a> -->
-                                    </div>
-                                </div>
-                                <p class="project-description">
-                                    I am planning to develop a web-based tool to visualize various CPU scheduling algorithms such as FCFS, SJF, Priority Scheduling, and Round Robin etc.<br>
-                                    The application will allow users to input process details, run the chosen algorithm, and see a step-by-step Gantt chart along with average waiting and turnaround times.<br>
-                                </p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">OS</span>
-                                    <span class="tech-tag">Scheduling Algorithms</span>
-                                    <span class="tech-tag">Express</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                </div>
                         </div>
                     </div>
                 </div>
