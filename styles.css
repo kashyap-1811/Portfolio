@@ -1131,8 +1131,8 @@ html {
         gap: 1.5rem;
     }
     .profile-image {
-        width: 400px !important;
-        height: 400px !important;
+        width: 320px;
+        height: 320px;
         margin-right: 0;
     }
     .social-links {
@@ -1207,8 +1207,8 @@ html {
         margin-bottom: 2rem;
     }
     .profile-image {
-        width: 280px !important;
-        height: 280px !important;
+        width: 280px;
+        height: 280px;
     }
 }
 
