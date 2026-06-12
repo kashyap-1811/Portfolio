@@ -108,6 +108,19 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9999;
 }
 
+
+
+/* 3D Tilt Card Base styling */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out), border-color 300ms var(--ease-out) !important;
+}
+
+.tilt-card > * {
+  transform: translateZ(10px);
+}
+
 /* Grid & Layout Utilities */
 .container {
   width: 100%;
@@ -1359,6 +1372,114 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Artha Technical Deep Dive Specs Grid */
+.artha-specs-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-primary);
+  width: 100%;
+}
+
+.artha-specs-title {
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.artha-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.artha-spec-card {
+  background: rgba(13, 20, 38, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+}
+
+.artha-spec-card-wide {
+  grid-column: span 4;
+}
+
+.spec-card-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(50px);
+  opacity: 0.12;
+  top: -60px;
+  right: -60px;
+}
+
+.spec-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--accent-cyan);
+  font-size: 1.35rem;
+  z-index: 1;
+}
+
+.artha-spec-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  z-index: 1;
+}
+
+.artha-spec-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  z-index: 1;
+}
+
+.spec-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  z-index: 1;
+}
+
+.spec-list li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.45;
+}
+
+.spec-list li::before {
+  content: '▪';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+}
+
 /* ==========================================================================
    Projects Section (Grid & Cards)
    ========================================================================== */
@@ -1474,7 +1595,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
@@ -1490,11 +1611,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   height: 100%;
 }
-
-.achievement-card-1 { grid-column: span 2; }
-.achievement-card-2 { grid-column: span 2; }
-.achievement-card-3 { grid-column: span 2; }
-.achievement-card-4 { grid-column: span 2; }
 
 .achievement-icon-wrap {
   width: 50px;
@@ -1709,9 +1825,6 @@ textarea.form-input {
   }
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .achievement-card-1, .achievement-card-2, .achievement-card-3, .achievement-card-4 {
-    grid-column: span 2;
   }
 }
 
