@@ -171,10 +171,10 @@ const initTypingEffect = () => {
     const currentWord = words[wordIdx];
     
     if (isDeleting) {
-      typingEl.textContent = currentWord.substring(0, charIdx - 1);
+      typingEl.textContent = currentWord.substring(0, charIdx - 1) || "\u200b";
       charIdx--;
     } else {
-      typingEl.textContent = currentWord.substring(0, charIdx + 1);
+      typingEl.textContent = currentWord.substring(0, charIdx + 1) || "\u200b";
       charIdx++;
     }
     
@@ -725,6 +725,52 @@ const initContactForm = () => {
   });
 };
 
+
+
+// ==========================================================================
+// 3D Card Hover Tilt Interaction
+// ==========================================================================
+const initCardTilt = () => {
+  const cards = document.querySelectorAll('.tilt-card');
+  if (window.innerWidth <= 768) return; // Skip on mobile for performance
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const w = rect.width;
+      const h = rect.height;
+      
+      // Calculate rotation angles (max 5 degrees)
+      const rotateX = ((h / 2 - y) / (h / 2)) * 5;
+      const rotateY = ((x - w / 2) / (w / 2)) * 5;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+      
+      // Move radial glow position (if exists)
+      const glow = card.querySelector('.spec-card-glow, .bento-card-bg-glow');
+      if (glow) {
+        glow.style.top = `${y - 125}px`;
+        glow.style.left = `${x - 125}px`;
+        glow.style.opacity = '0.24';
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      
+      const glow = card.querySelector('.spec-card-glow, .bento-card-bg-glow');
+      if (glow) {
+        glow.style.opacity = '0.12';
+        glow.style.top = '';
+        glow.style.left = '';
+      }
+    });
+  });
+};
+
 // ==========================================================================
 // Initializations
 // ==========================================================================
@@ -743,4 +789,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDSAVisualizer();
   initArthaSimulator();
   initContactForm();
+  initCardTilt();
 });
